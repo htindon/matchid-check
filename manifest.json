@@ -3,7 +3,7 @@
 	"name": "matchid-check",
 	"version": "1.0.1",
 	"action": {
-		"default_popup": "check.html"
+		"default_popup": "popup.html"
 	},
 	//"default_locale": "fr",
 	"description": "Vérifier un décès à la volée tout en travaillant sur sa généalogie.",
@@ -16,9 +16,8 @@
 	"content_scripts": [
 		{
 			"js": ["scripts/content.js"],
-			"matches":[
-				"https://gw.geneanet.org/*"
-			]
+			"css": ["matchid-check.css"],
+			"matches":["<all_urls>"]
 		}
 	],
 	"author": "helene.tindon@gmail.com"
